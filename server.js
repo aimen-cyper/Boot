@@ -6,8 +6,10 @@
 const express = require("express");
 const webSocket = require("ws");
 const http = require("http");
-const TelegramBotLib = require("node-telegram-bot-api");
-const TelegramBot = TelegramBotLib.default || TelegramBotLib;
+// استبدل أسطر التيليجرام السابقة بهذا الكود:
+const botModule = require("node-telegram-bot-api");
+const TelegramBot = botModule.TelegramBot || botModule.default || botModule;
+
 
 const uuid4 = require("uuid");
 const multer = require("multer");
