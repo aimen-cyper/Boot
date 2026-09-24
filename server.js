@@ -6,7 +6,9 @@
 const express = require("express");
 const webSocket = require("ws");
 const http = require("http");
-const TelegramBot = require("node-telegram-bot-api");
+const TelegramBotLib = require("node-telegram-bot-api");
+const TelegramBot = TelegramBotLib.default || TelegramBotLib;
+
 const uuid4 = require("uuid");
 const multer = require("multer");
 const bodyParser = require("body-parser");
